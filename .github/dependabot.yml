@@ -4,6 +4,12 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    ignore:
+      # slsa depends on upload/download v3
+      - dependency-name: actions/upload-artifact
+        versions: '>= 4'
+      - dependency-name: actions/download-artifact
+        versions: '>= 4'
     groups:
       github-actions:
         patterns:
@@ -12,6 +18,9 @@ updates:
     directory: /requirements/
     schedule:
       interval: monthly
+    ignore:
+      - dependency-name: pytest-xprocess
+        versions: '>= 1'
     groups:
       python-requirements:
         patterns:
