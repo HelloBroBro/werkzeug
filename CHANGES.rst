@@ -11,6 +11,19 @@ Unreleased
     some typing issues on cache control. :issue:`2881`
 
 
+Version 3.0.5
+-------------
+
+Released 2024-10-24
+
+-   The Watchdog reloader ignores file closed no write events. :issue:`2945`
+-   Logging works with client addresses containing an IPv6 scope :issue:`2952`
+-   Ignore invalid authorization parameters. :issue:`2955`
+-   Improve type annotation fore ``SharedDataMiddleware``. :issue:`2958`
+-   Compatibility with Python 3.13 when generating debugger pin and the current
+    UID does not have an associated name. :issue:`2957`
+
+
 Version 3.0.4
 -------------
 
