@@ -9,6 +9,20 @@ Unreleased
 -   ``CacheControl.no_transform`` is a boolean when present. ``min_fresh`` is
     ``None`` when not present. Added the ``must_understand`` attribute. Fixed
     some typing issues on cache control. :issue:`2881`
+-   Add ``stale_while_revalidate`` and ``stale_if_error`` properties to
+    ``ResponseCacheControl``. :issue:`2948`
+-   Add 421 ``MisdirectedRequest`` HTTP exception. :issue:`2850`
+
+
+Version 3.0.6
+-------------
+
+Released 2024-10-25
+
+-   Fix how ``max_form_memory_size`` is applied when parsing large non-file
+    fields. :ghsa:`q34m-jh98-gwm2`
+-   ``safe_join`` catches certain paths on Windows that were not caught by
+    ``ntpath.isabs`` on Python < 3.11. :ghsa:`f9vj-2wh5-fj8j`
 
 
 Version 3.0.5
